@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang SPK TOPSIS - Penerima Bantuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --bg-primary: #0f0f17;
+            --bg-secondary: #171724;
+            --accent: #9d4edd;
+            --accent-light: rgba(157, 78, 221, 0.15);
+            --accent-secondary: #ff38bd;
+            --text: #f0f0f0;
+            --text-muted: #afafbf;
+            --card-border: rgba(255, 255, 255, 0.05);
+            --gradient: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-primary);
+            background-image: 
+                radial-gradient(circle at 25% 10%, rgba(157, 78, 221, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 90%, rgba(255, 56, 189, 0.05) 0%, transparent 50%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: var(--gradient);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+        
+        .avatar-glow {
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center px-4 py-8 md:px-8 md:py-12">
+    <!-- Header -->
+    <header class="w-full max-w-6xl text-center mb-12 animate-fade-in-down">
+        <div class="relative inline-block mb-6">
+            <div class="w-20 h-20 rounded-2xl gradient-bg flex items-center justify-center text-white text-3xl shadow-lg animate-float">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="absolute -inset-2 rounded-2xl gradient-bg opacity-20 blur-md -z-10 animate-pulse-slow"></div>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold mb-3 gradient-text">
+            SPK TOPSIS - Penerima Bantuan
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            Sistem Pendukung Keputusan Modern untuk Seleksi Penerima Bantuan Sosial secara Objektif dan Tepat Sasaran
+        </p>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Left Column -->
+        <div class="lg:col-span-2 space-y-8">
+            <!-- About Card -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-info-circle text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Tentang Aplikasi</h2>
+                </div>
+                
+                <p class="text-gray-400 mb-4">
+                    Aplikasi <span class="font-medium text-white">SPK TOPSIS - Penerima Bantuan</span> adalah sistem pendukung keputusan berbasis web yang dirancang untuk membantu proses seleksi dan penentuan prioritas penerima bantuan sosial secara objektif, transparan, dan berbasis data.
+                </p>
+                
+                <p class="text-gray-400">
+                    Aplikasi ini menggunakan metode <span class="font-medium gradient-text">TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)</span> yang merupakan salah satu metode pengambilan keputusan multi-kriteria paling efektif. TOPSIS bekerja dengan prinsip bahwa alternatif yang dipilih harus memiliki jarak terdekat dari solusi ideal positif dan jarak terjauh dari solusi ideal negatif.
+                </p>
+            </div>
+            
+            <!-- Features Card -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-star text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Fitur Utama</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-700/30 rounded-xl p-6 border border-gray-600/20 transition-all duration-300 feature-card">
+                        <div class="w-14 h-14 rounded-xl bg-gray-700 flex items-center justify-center text-2xl text-purple-400 mb-4 feature-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Impor Data Excel</h3>
+                        <p class="text-gray-400 text-sm">Unggah dan kelola data calon penerima dari file Excel dengan mudah</p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-700/30 rounded-xl p-6 border border-gray-600/20 transition-all duration-300 feature-card">
+                        <div class="w-14 h-14 rounded-xl bg-gray-700 flex items-center justify-center text-2xl text-purple-400 mb-4 feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Kalkulasi Otomatis</h3>
+                        <p class="text-gray-400 text-sm">Perhitungan dengan algoritma TOPSIS secara otomatis dan akurat</p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-700/30 rounded-xl p-6 border border-gray-600/20 transition-all duration-300 feature-card">
+                        <div class="w-14 h-14 rounded-xl bg-gray-700 flex items-center justify-center text-2xl text-purple-400 mb-4 feature-icon">
+                            <i class="fas fa-sort-amount-down"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Perankingan</h3>
+                        <p class="text-gray-400 text-sm">Lihat hasil perangkingan berdasarkan nilai preferensi TOPSIS</p>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-700/30 rounded-xl p-6 border border-gray-600/20 transition-all duration-300 feature-card">
+                        <div class="w-14 h-14 rounded-xl bg-gray-700 flex items-center justify-center text-2xl text-purple-400 mb-4 feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">UI Modern</h3>
+                        <p class="text-gray-400 text-sm">Antarmuka pengguna responsif dengan visualisasi data interaktif</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Criteria Card -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-balance-scale text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Kriteria Penilaian</h2>
+                </div>
+                
+                <p class="text-gray-400 mb-6">
+                    Sistem menggunakan empat kriteria utama untuk menentukan prioritas penerima bantuan sosial:
+                </p>
+                
+                <div class="space-y-4">
+                    <!-- Criteria 1 -->
+                    <div class="flex items-center justify-between bg-gray-700/30 rounded-xl px-5 py-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="font-medium">Jumlah Anggota Keluarga</span>
+                        </div>
+                        <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">25%</span>
+                    </div>
+                    
+                    <!-- Criteria 2 -->
+                    <div class="flex items-center justify-between bg-gray-700/30 rounded-xl px-5 py-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <span class="font-medium">Pekerjaan</span>
+                        </div>
+                        <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-sm font-medium">30%</span>
+                    </div>
+                    
+                    <!-- Criteria 3 -->
+                    <div class="flex items-center justify-between bg-gray-700/30 rounded-xl px-5 py-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <span class="font-medium">Penghasilan</span>
+                        </div>
+                        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">30%</span>
+                    </div>
+                    
+                    <!-- Criteria 4 -->
+                    <div class="flex items-center justify-between bg-gray-700/30 rounded-xl px-5 py-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-400">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <span class="font-medium">Status Kepemilikan Rumah</span>
+                        </div>
+                        <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">15%</span>
+                    </div>
+                </div>
+                
+                <p class="text-gray-400 mt-6">
+                    Dengan kombinasi kriteria ini dan pendekatan multi-kriteria TOPSIS, sistem dapat menghasilkan rekomendasi penerima bantuan yang lebih tepat sasaran berdasarkan tingkat kebutuhan yang terukur secara objektif.
+                </p>
+                
+                <div class="mt-8 text-center">
+                    <a href="unggah.php" class="inline-flex items-center gap-2 gradient-bg text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-play"></i>
+                        Mulai Menggunakan
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="space-y-8">
+            <!-- Developer Profile -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-user text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Profil Pengembang</h2>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full gradient-bg p-1 mb-4 avatar-glow">
+                        <img src="images/profil.jpg" alt="Avatar" class="w-full h-full rounded-full object-cover border-4 border-gray-800">
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold gradient-text mb-1">Arin</h3>
+                    <p class="text-gray-400 text-sm mb-4 text-center">Pengembang Web & Sistem Pendukung Keputusan</p>
+                    
+                    <p class="text-gray-400 text-sm mb-6 text-center">
+                        Pengembang web yang berfokus pada sistem berbasis data dan aplikasi pendukung keputusan. Memiliki ketertarikan mendalam pada pengembangan solusi teknologi untuk membantu permasalahan sosial dan pelayanan publik.
+                    </p>
+                    
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-500/30 social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-600/50 social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700/50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500/30 social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Latar Belakang</h2>
+                </div>
+                
+                <p class="text-gray-400 text-sm mb-4">
+                    Aplikasi ini dikembangkan sebagai bagian dari proyek untuk membantu lembaga sosial dan pemerintah dalam mendistribusikan bantuan secara lebih efektif, tepat sasaran, dan berbasis data.
+                </p>
+                
+                <p class="text-gray-400 text-sm">
+                    Inspirasi dari pembuatan aplikasi ini berasal dari pengamatan terhadap proses distribusi bantuan sosial yang terkadang kurang tepat sasaran. Dengan memanfaatkan teknologi informasi dan metode pengambilan keputusan yang sistematis, diharapkan seleksi penerima bantuan dapat dilakukan dengan lebih transparan dan objektif.
+                </p>
+            </div>
+            
+            <!-- Technology -->
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-hover">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-semibold">Teknologi</h2>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-md bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fas fa-code text-sm"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm"><span class="font-medium text-gray-300">Frontend:</span> HTML5, CSS3, JavaScript</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-md bg-purple-500/10 flex items-center justify-center text-purple-400">
+                            <i class="fas fa-server text-sm"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm"><span class="font-medium text-gray-300">Backend:</span> PHP</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-md bg-pink-500/10 flex items-center justify-center text-pink-400">
+                            <i class="fas fa-project-diagram text-sm"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm"><span class="font-medium text-gray-300">Metode DSS:</span> TOPSIS</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-md bg-green-500/10 flex items-center justify-center text-green-400">
+                            <i class="fas fa-book text-sm"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm"><span class="font-medium text-gray-300">Library:</span> Data processing & visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="w-full max-w-6xl mt-16 pt-8 border-t border-gray-700/30 text-center">
+        <div class="flex flex-wrap justify-center gap-6 mb-6">
+            <a href="unggah.php" class="text-gray-400 hover:text-white transition-colors">Beranda</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Bantuan</a>
+            <a href="kontak.php" class="text-gray-400 hover:text-white transition-colors">Kontak</a>
+        </div>
+        <p class="text-gray-500 text-sm">
+            &copy; 2025 SPK TOPSIS - Penerima Bantuan | Dikembangkan oleh Arin
+        </p>
+    </footer>
+    
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
